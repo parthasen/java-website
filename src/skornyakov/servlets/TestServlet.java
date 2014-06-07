@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by A on 07.06.2014.
@@ -15,6 +16,8 @@ public class TestServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        PrintWriter pw = response.getWriter();
+        pw.println("<html><head><title>Test</title><body><h1>Test Servlet</h1></body></html>");
+        pw.close();
     }
 }
