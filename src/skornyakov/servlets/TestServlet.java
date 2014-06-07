@@ -17,7 +17,7 @@ public class TestServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        pw.println("<html><head><title>Test</title><body><h1>Test Servlet</h1></body></html>");
+        pw.println("<html><head><title>Test</title></head><body><h1>Test Servlet</h1></body></html>");
         pw.close();
     }
 }
