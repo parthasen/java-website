@@ -2,6 +2,7 @@ package skornyakov.servlets;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -41,6 +42,9 @@ public class Upload extends HttpServlet {
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
+	FileWriter fw = new FileWriter(destination+File.separator+"request.txt");
+	fw.write(request.getParts().toString());
+	fw.close();
 	String location = this.getServletContext().getContextPath()
 		+ "/index.jsp";
 	response.sendRedirect(location);
