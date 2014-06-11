@@ -5,10 +5,10 @@
 <title></title>
 <link rel="stylesheet"
 	href="<%=application.getContextPath()
-		    + "/resources/css/bootstrap.min.css"%>">
+		    + "/resources/defaultTheme/css/bootstrap.min.css"%>">
 <link
 	href="<%=application.getContextPath()
-		    + "/resources/css/jumbotron.css"%>"
+		    + "/resources/defaultTheme/css/jumbotron.css"%>"
 	rel="stylesheet">
 </head>
 <body>
@@ -102,6 +102,6 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script
 		src="<%=application.getContextPath()
-		    + "/resources/js/bootstrap.min.js"%>"></script>
+		    + "/resources/defaultTheme/js/bootstrap.min.js"%>"></script>
 </body>
 </html>
