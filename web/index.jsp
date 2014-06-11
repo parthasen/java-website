@@ -1,3 +1,4 @@
+<%@page import="skornyakov.config.Config"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
 <head>
@@ -20,7 +21,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+				<a class="navbar-brand" href="#"><%=Config.websiteName %></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right" role="form">
