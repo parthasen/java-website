@@ -28,7 +28,7 @@ public class DateServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request,
 	    HttpServletResponse response) throws ServletException, IOException {
-	// TODO Auto-generated method stub
+	
     }
 
     /**
@@ -37,7 +37,7 @@ public class DateServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request,
 	    HttpServletResponse response) throws ServletException, IOException {
-	// TODO Auto-generated method stub
+	this.doGet(request,response);
     }
 
 }
