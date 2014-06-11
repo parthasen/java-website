@@ -14,8 +14,6 @@
 <form action="upload" method="post" enctype="multipart/form-data">
     File:
     <input type="file" name="file"/>
-    Destination:
-    <input type="text" name="destination" value="C:\tmp"/>
     <input type="submit" value="Upload"/>
 </form>
 </body>
