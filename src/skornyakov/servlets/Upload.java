@@ -18,8 +18,6 @@ import javax.servlet.http.Part;
  */
 @MultipartConfig
 public class Upload extends HttpServlet {
-    private String fileName;
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String destination = System.getProperty("user.home");
         Part filePart = request.getPart("file");
