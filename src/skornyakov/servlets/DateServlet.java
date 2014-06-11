@@ -2,6 +2,7 @@ package skornyakov.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,7 +32,11 @@ public class DateServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
 	    HttpServletResponse response) throws ServletException, IOException {
 	PrintWriter pw = response.getWriter();
-	pw.println("<html><body><body></html>");
+	Date date = new Date();
+	
+	pw.println("<html><body>");
+	pw.println(date);
+	pw.println("</body></html>");
 	pw.close();
     }
 
