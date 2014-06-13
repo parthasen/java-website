@@ -19,6 +19,7 @@
 
 	</dependencies>
 	<build>
+	<finalName>sw</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
@@ -53,6 +54,7 @@
 					<debug>false</debug>
 					<echo>true</echo>
 					<user>admin</user>
+					<passwordFile>${glassfish.home}/domains/domain1/config/domain-passwords</passwordFile>
 					<components>
 						<component>
 							<name>${project.artifactId}</name>
