@@ -53,6 +53,7 @@
 					<terse>true</terse>
 					<debug>false</debug>
 					<echo>true</echo>
+					<force>true</force>
 					<user>admin</user>
 					<passwordFile>${glassfish.home}/domains/domain1/config/domain-passwords</passwordFile>
 					<components>
