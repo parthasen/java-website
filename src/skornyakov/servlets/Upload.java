@@ -19,7 +19,12 @@ import javax.servlet.http.Part;
  */
 @MultipartConfig
 public class Upload extends HttpServlet {
-    protected void doPost(HttpServletRequest request,
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request,
 	    HttpServletResponse response) throws ServletException, IOException {
 	String destination = System.getProperty("user.home");
 	Part filePart = request.getPart("file");
@@ -56,7 +61,6 @@ public class Upload extends HttpServlet {
     }
 
     public String getFileName(Part part) {
-	final String partHeader = part.getHeader("content-disposition");
 	for (String content : part.getHeader("content-disposition").split(";")) {
 	    if (content.trim().startsWith("filename")) {
 		return content.substring(content.indexOf('=') + 1).trim()

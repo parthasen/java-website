@@ -9,7 +9,12 @@ import javax.inject.Named;
 @SessionScoped
 public class ConfigBean implements Serializable{
     
-    private String websiteName = "Website name";
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String websiteName = "Website name";
 
     public String getWebsiteName() {
         return websiteName;
