@@ -5,6 +5,10 @@
 	<artifactId>simple_website</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	
+	<properties>
+		<glassfish.home>/home/alexander/glassfish4/glassfish/bin/</glassfish.home>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -45,16 +49,14 @@
 					</execution>
 				</executions>
 				<configuration>
-					<executable>asadmin</executable>
+					<executable>${glassfish.home}asadmin</executable>
 					<arguments>
 						<argument>deploy</argument>
 						<argument>--force=true</argument>
 						<argument>--user=admin</argument>
-
 						<argument>--host=localhost</argument>
 						<argument>--port=4848</argument>
 						<argument>target/${project.build.finalName}</argument>
-						
 					</arguments>
 				</configuration>
 			</plugin>
