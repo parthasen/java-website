@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<glassfish.home>/home/alexander/glassfish4/glassfish</glassfish.home>
+		<glassfish.home>C:/glassfish4/glassfish</glassfish.home>
 	</properties>
 	<dependencies>
 		<dependency>
