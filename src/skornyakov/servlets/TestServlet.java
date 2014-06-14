@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import skornyakov.beans.spring.HelloMessage;
 
@@ -29,7 +30,10 @@ public class TestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
         
-        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        XmlWebApplicationContext context = new XmlWebApplicationContext ();
+        context.setConfigLocation("/WEB-INF/Beans.xml");
+        context.setServletContext(this.getServletContext());
+        context.refresh();
         String beanName = "helloMessage";
 	HelloMessage hm = (HelloMessage)context.getBean(beanName);
 	String message = hm.getMessage();
