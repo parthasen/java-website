@@ -56,7 +56,6 @@ public class TestServlet extends HttpServlet {
 	
 	beanName = "beanWithDestrMethod";
 	BeanWithDestrMethod bwdm = (BeanWithDestrMethod)context.getBean(beanName);
-	bwdm
 
 	pw.println("<html><head><title>Test</title></head><body><h1>Test Servlet</h1>");
 	for (String message : messages) {
