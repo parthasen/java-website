@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
+import skornyakov.beans.spring.BeanWithDestrMethod;
 import skornyakov.beans.spring.BeanWithInitMethod;
 import skornyakov.beans.spring.HelloMessage;
 import skornyakov.beans.spring.LazyBean;
@@ -52,6 +53,10 @@ public class TestServlet extends HttpServlet {
 	BeanWithInitMethod bwim = (BeanWithInitMethod) context
 		.getBean(beanName);
 	messages.add(bwim.getMessage());
+	
+	beanName = "beanWithDestrMethod";
+	BeanWithDestrMethod bwdm = (BeanWithDestrMethod)context.getBean(beanName);
+	bwdm
 
 	pw.println("<html><head><title>Test</title></head><body><h1>Test Servlet</h1>");
 	for (String message : messages) {

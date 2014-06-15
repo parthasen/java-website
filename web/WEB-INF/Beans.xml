@@ -15,4 +15,8 @@
 	<bean id="beanWithInitMethod" class="skornyakov.beans.spring.BeanWithInitMethod" init-method="init">
 		
 	</bean>
+	
+	<bean id="beanWithDestrMethod" class="skornyakov.beans.spring.BeanWithDestrMethod" destroy-method="destroy">
+	
+	</bean>
 </beans>
