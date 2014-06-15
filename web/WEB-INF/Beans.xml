@@ -7,4 +7,8 @@
 	<bean id="helloMessage" class="skornyakov.beans.spring.HelloMessage">
 		<property name="message" value="AZAZA message" />
 	</bean>
+	
+	<bean id="lazyBeanExample" class="skornyakov.beans.spring.LazyBean" lazy-init="true">
+		<property name="message" value="Lazy message"/>
+	</bean>
 </beans>
