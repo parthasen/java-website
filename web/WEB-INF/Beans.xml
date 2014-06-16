@@ -19,5 +19,9 @@
 	<bean id="beanWithDestrMethod" class="skornyakov.beans.spring.BeanWithDestrMethod" destroy-method="destroy">
 	
 	</bean>
+	
+	<bean id="prototypeBean" class="skornyakov.beans.spring.PrototypeBean" scope="prototype">
+	
+	</bean>
 
 </beans>
