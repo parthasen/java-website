@@ -11,7 +11,6 @@
 	<bean id="lazyBeanExample" class="skornyakov.beans.spring.LazyBean" lazy-init="true">
 		<property name="message" value="Lazy message"/>
 	</bean>
-
 	
 	<bean id="beanWithInitMethod" class="skornyakov.beans.spring.BeanWithInitMethod" init-method="init">
 		

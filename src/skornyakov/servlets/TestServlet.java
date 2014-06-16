@@ -2,14 +2,7 @@ package skornyakov.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
->>>>>>> branch 'master' of https://github.com/sk1212/simple_website
-=======
->>>>>>> refs/remotes/origin/master
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,8 +37,6 @@ public class TestServlet extends HttpServlet {
 	context.setConfigLocation("/WEB-INF/Beans.xml");
 	context.setServletContext(this.getServletContext());
 	context.refresh();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 	ArrayList<String> messages = new ArrayList<String>();
 
@@ -70,23 +61,7 @@ public class TestServlet extends HttpServlet {
 	    pw.println("<h2>" + message + "</h2>");
 	}
 	pw.println("</body></html>");
-=======
-=======
->>>>>>> refs/remotes/origin/master
-	String beanName = "helloMessage";
-	HelloMessage hm = (HelloMessage) context.getBean(beanName);
-	String message = hm.getMessage();
-	beanName = "lazyBeanExample";
-	LazyBean lb = (LazyBean)context.getBean(beanName);
-	String lazyMessage = lb.getMessage();
-	pw.println("<html><head><title>Test</title></head><body><h1>Test Servlet</h1><h2>"
-		+ message + "</h2>"
-			+ "<h2>" + lazyMessage + "</h2>"
-			+ "</body></html>");
-<<<<<<< HEAD
->>>>>>> branch 'master' of https://github.com/sk1212/simple_website
-=======
->>>>>>> refs/remotes/origin/master
+
 	pw.close();
     }
 }
