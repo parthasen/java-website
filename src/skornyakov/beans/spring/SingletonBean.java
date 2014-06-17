@@ -1,9 +1,12 @@
 package skornyakov.beans.spring;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
 /**
  * Created by Alexander on 16.06.2014.
  */
-public class SingletonBean {
+public class SingletonBean implements InitializingBean, DisposableBean {
     private String value;
 
     public SingletonBean() {
@@ -17,5 +20,15 @@ public class SingletonBean {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        //initialization method
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        //destoy method
     }
 }

@@ -37,6 +37,7 @@ public class Scopes extends HttpServlet {
 
         XmlWebApplicationContext context = (XmlWebApplicationContext) getServletContext()
                 .getAttribute("springXmlWebApplicationContext");
+        context.registerShutdownHook();
 
         PrototypeBean pb = (PrototypeBean) context.getBean("prototypeBean");
         SingletonBean sb = (SingletonBean) context.getBean("singletonBean");

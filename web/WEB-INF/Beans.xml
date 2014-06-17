@@ -1,31 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
-	xsi:schemaLocation="
+       xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="helloMessage" class="skornyakov.beans.spring.HelloMessage">
-		<property name="message" value="AZAZA message" />
-	</bean>
-	
-	<bean id="lazyBeanExample" class="skornyakov.beans.spring.LazyBean" lazy-init="true">
-		<property name="message" value="Lazy message"/>
-	</bean>
-	
-	<bean id="beanWithInitMethod" class="skornyakov.beans.spring.BeanWithInitMethod" init-method="init">
-		
-	</bean>
-	
-	<bean id="beanWithDestrMethod" class="skornyakov.beans.spring.BeanWithDestrMethod" destroy-method="destroy">
-	
-	</bean>
-	
-	<bean id="prototypeBean" class="skornyakov.beans.spring.PrototypeBean" scope="prototype">
-	
-	</bean>
+    <bean id="helloMessage" class="skornyakov.beans.spring.HelloMessage">
+        <property name="message" value="AZAZA message"/>
+    </bean>
+
+    <bean id="lazyBeanExample" class="skornyakov.beans.spring.LazyBean" lazy-init="true">
+        <property name="message" value="Lazy message"/>
+    </bean>
+
+    <bean id="beanWithInitMethod" class="skornyakov.beans.spring.BeanWithInitMethod" init-method="init">
+
+    </bean>
+
+    <bean id="beanWithDestrMethod" class="skornyakov.beans.spring.BeanWithDestrMethod" destroy-method="destroy">
+
+    </bean>
+
+    <bean id="prototypeBean" class="skornyakov.beans.spring.PrototypeBean" scope="prototype">
+
+    </bean>
 
     <bean id="singletonBean" class="skornyakov.beans.spring.SingletonBean" scope="singleton">
 
+    </bean>
+
+    <bean class="skornyakov.beans.spring.SamplePostProcessor"/>
+
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd"/>
+    </bean>
+
+    <bean id="person" class="skornyakov.beans.spring.PersonBean">
+        <property name="name" value="Alex"/>
+        <property name="middleName" value="Yurievich"/>
+        <property name="lastname" value="Skornyakov"/>
+        <property name="birthDate">
+            <bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="1991-12-12"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="citizen" class="skornyakov.beans.spring.CitizenBean" parent="person">
+        <property name="citizenship" value="USA"/>
     </bean>
 
 </beans>
