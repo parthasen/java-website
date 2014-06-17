@@ -46,6 +46,7 @@
     </bean>
 
     <bean id="citizen" class="skornyakov.beans.spring.CitizenBean" parent="person">
+    	<property name="name" value="Alexander"></property>
         <property name="citizenship" value="USA"/>
     </bean>
 
