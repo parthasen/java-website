@@ -15,38 +15,38 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/date")
 public class DateServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DateServlet() {
-	super();
-	// TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public DateServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doGet(HttpServletRequest request,
-	    HttpServletResponse response) throws ServletException, IOException {
-	PrintWriter pw = response.getWriter();
-	Date date = new Date();
-	
-	pw.println("<html><body>");
-	pw.println(date);
-	pw.println("</body></html>");
-	pw.close();
-    }
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter pw = response.getWriter();
+		Date date = new Date();
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doPost(HttpServletRequest request,
-	    HttpServletResponse response) throws ServletException, IOException {
-	this.doGet(request, response);
-    }
+		pw.println("<html><body>");
+		pw.println(date);
+		pw.println("</body></html>");
+		pw.close();
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
 
 }

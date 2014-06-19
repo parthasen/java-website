@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -24,6 +25,8 @@ public class Upload extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+
+		
 		String destination = System.getProperty("user.home");
 		Part filePart = request.getPart("file");
 		String fileName = getFileName(filePart);
@@ -68,4 +71,6 @@ public class Upload extends HttpServlet {
 		}
 		return null;
 	}
+	
+	
 }
